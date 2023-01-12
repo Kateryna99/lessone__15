@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body{
+    font-family: "Lato";
+}
+.button{
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    color: fff;
+    display: inline-block;
+    padding: 16px 40px;
+    color: #FFFFFF;
+    transition: 0.6s ease;
+}
+.button:hover {
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+.button__transparent{
+    color: rgba(255, 63, 58, 1);
+    border: 1px solid rgba(255, 63, 58, 1);
+    background: transparent;
+    padding: 15px, 40px;
+    transition: 0.6s ease;
+}
+.button__transparent:hover {
+    border-radius: 20px;
+    transform: scale(1.1);
+}

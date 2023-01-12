@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+body{
+    font-size: "Lato";
+    color: #424551;
+}
+
+[class*="__container"] {
+    max-width: 1260px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+.wrapper{
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > main {
+    flex-grow: 1;
+}
+
+
+
+.header {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.header__logo img{
+    max-width: 100%;
+}
+.header__menu {
+    flex-grow: 1;
+}
+
+
+.menu__list {
+    display: flex;
+    column-gap: 35px;
+    row-gap: 15px;
+    flex-wrap: wrap;
+}
+.menu__link {
+    color: rgba(66, 69, 81, 1);
+    font-weight: 700;
+    line-height: 160%;
+    position: relative;
+}
+.menu__link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.7s ease;
+    }
+.menu__link:hover::before{
+    opacity: 1;
+    width: 100%;
+}
+
+
+.header__action { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+.action__login { 
+    font-weight: 700;
+    color: rgba(66, 69, 81, 1);
+    background: url('../img/header/vector.svg') left  no-repeat;
+    padding-left: 24px;
+    line-height: 1.25;
+}
+
+
+
+.page {
+    position: relative;
+    padding: 200px 0 80px;
+    background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+}
+.page__container {
+    position: relative;
+    z-index: 2;
+}
+.intro__body {
+    margin-bottom: 190px;
+}
+.content {
+    display: flex;
+}
+.content__box {
+    flex: 1 0 50%;
+    padding-right: 40px;
+    align-items: center;
+}
+.box__play {
+    color:rgba(30, 33, 44, 1);
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+.box__play:not(:last-child){
+    margin-bottom: 40px;
+}
+.box__play::before{
+    content: "";
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border-radius: 50%;
+    background: #FF3F3A url('../img/main/play.svg') center no-repeat;
+    position: relative;
+    z-index: 2;
+    transition: 0.8s ease;
+}
+.box__play::after{
+    content: "";
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #FF3F3A;
+    opacity: 0.2;
+    transform: scale(1.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.8s ease;
+}
+.box__play:hover::after{
+    transform: scale(1);
+}
+.box__play:hover::before{
+    transform: scale(1.2);
+}
+
+.box__title {
+    font-weight: 900;
+    color:rgba(30, 33, 44, 1);
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 1px;
+}
+.box__title:not(:last-child){
+    margin-bottom: 60px;
+}
+.box__action{
+    display: inline-flex;
+    gap: 24px;
+}
+.content__illustration {
+    flex: 1 0 50%;
+}
+.content__illustration img{
+    max-width: 107.8%;
+    transform: translate(7.8%, 0);
+}
+
+
+
+
+.achievement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.achievement__item {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.achievement__number {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 59.8px;
+    color: rgba(30, 33, 44, 1);
+}
+.achievement__desc {
+    line-height: 25.6px;
+    color:rgba(30, 33, 44, 1);
+}
+.achievement__circle {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    background: #FF3F3A;
+    border-radius: 50%;
+}
+
+
+
+.decor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.decor__item {
+    position: absolute;
+}
+.decor__item-first {
+    background: url('../img/main/main_intro/decor1.svg') 0 0 no-repeat;
+    width: 96px;
+    height: 96px;
+    left:4.1%;
+    top: 12%;
+}
+.decor__item-second {
+    background: url('../img/main/main_intro/decor2.svg') 0 0 no-repeat;
+    width: 88px;
+    height: 47px;
+    top: 44.7%;
+    left: 40.5%;
+}
+.decor__item-third {
+    background: url('../img/main/main_intro/decor3.svg') 0 0 no-repeat;
+    width: 284px;
+    height: 284px;
+    bottom: -7.8%;
+    left: -5.6%;
+}
+.decor__item-fourth {
+    background: url('../img/main/main_intro/decor4.svg') 0 0 no-repeat;
+    width: 61px;
+    height: 61px;
+    left: 38%;
+    bottom: 24%;
+}
+.decor__item-fifth {
+    background: url('../img/main/main_intro/decor5.svg') 0 0 no-repeat;
+    width: 187px;
+    height: 137px;
+    right: -1.5%;
+    bottom: 13.9%;
+}
+.decor__item-sixth {
+    background: url('../img/main/main_intro/decor1.svg') 0 0 no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: rotate(130deg);
+    right: 5%;
+    top: -4.1%;
+}
+
+
+
+.part {
+    padding: 148px 0;
+    position: relative;
+}
+.part__container {
+    position: relative;
+    z-index: 2;
+}
+.block {
+    display: flex;
+    gap: 135px;
+}
+.block__img img {
+    max-width: 100%;
+}
+.explanation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.explanation__subtitle {
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #1E212C;
+    text-transform: uppercase;
+}
+.explanation__subtitle:not(:last-child){
+    margin-bottom: 8px;
+}
+.explanation__title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 59.8px;
+    color: #1E212C;
+}
+.explanation__title:not(:last-child){
+    margin-bottom: 40px;
+}
+.explanation__list {
+    margin-bottom: 48px;
+}
+.explanation__item {
+    background: url('../img/main/why_creratex/vector_createx.svg') 0 7px no-repeat;
+    line-height: 24.5px;
+    padding-left: 30px;
+}
+.explanation__item:not(:last-child){
+    margin-bottom: 14px;
+}
+
+
+
+.decor__reason {
+    position: absolute;
+}
+.decor__reason-first {
+    background: url('../img/main/why_creratex/decor__createx1.svg');
+    width: 181px;
+    height: 132px;
+    top: 10%;
+    left: -5.4%;
+}
+.decor__reason-second {
+    background: url('../img/main/why_creratex/decor_createx2.svg');
+    width: 287px;
+    height: 287px;
+    bottom: 0;
+    right: -8.9%;
+}
+
+
+
+
